@@ -1,0 +1,28 @@
+---
+- hosts: webserver
+  become: true
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Copy custom Nginx config
+      copy:
+        src: /path/to/nginx.conf
+        dest: /etc/nginx/nginx.conf
+      notify:
+        - Reload Nginx
+
+  handlers:
+    - name: Reload Nginx
+      service:
+        name: nginx
+        state: reloaded
