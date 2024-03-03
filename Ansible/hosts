@@ -1,2 +1,0 @@
-[webserver]
-local_server_ip ansible_ssh_user=your_ssh_user
