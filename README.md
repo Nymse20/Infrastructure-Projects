@@ -1,4 +1,4 @@
-My personal collection of stuff. 
+My personal collection of stuff. More will be added soon. 
 
 A lot of networking, a lot of coding and automation in the folders. 
 
